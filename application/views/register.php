@@ -3,8 +3,13 @@
 <div class="container shadow p-3 mb-5 bg-body-tertiary rounded mt-5" style="width: 500px;">
     <h2 class="mb-3 text-center text-primary">Register</h2>
 
+    <?php if ($this->session->flashdata('msg')) {
+        echo "<h5 class='text-success text-center mt-1'>" . $this->session->flashdata('msg') . "</h5>";
+    }
+    ?>
+
     <?php echo validation_errors(); ?>
-    <?php echo form_open(); ?>
+    <?php echo form_open('Register/registerUser'); ?>
     <div class="row">
         <div class="col-md-6">
             <label for="fname" class="form-label">First Name</label>
@@ -23,12 +28,12 @@
             <input class="form-control" type="file" id="profilePic" name="profilePic">
         </div>
         <div class="col-md-6">
-            <label for="password1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password1" name="password1">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
         </div>
         <div class="col-md-6">
-            <label for="password2" class="form-label ">Confirm Password</label>
-            <input type="password" class="form-control" id="password2" name="password2">
+            <label for="conpassword" class="form-label ">Confirm Password</label>
+            <input type="password" class="form-control" id="conpassword" name="conpassword">
         </div>
     </div>
 
@@ -37,7 +42,7 @@
         <!-- Increase the width of the button -->
     </div>
 
-    <p class="text-center">Already have an account? <span><a href="#"
+    <p class="text-center">Already have an account? <span><a href="<?php echo base_url('index.php/home/login'); ?>"
                 class="text-decoration-none fs-5 ms-2">Login</a></span></p>
 
     <!-- </form> -->
