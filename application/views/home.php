@@ -14,7 +14,7 @@
             </div>
             <div class="d-flex justify-content-start mt-4">
                 <div class="p-2">
-                    <button type="button" class="btn btn-outline-secondary fs-4 ps-5 pe-5 fw-semibold" style="">Start</button>
+                    <button type="button" class="btn btn-outline-secondary fs-4 ps-5 pe-5 fw-semibold">Start</button>
                 </div>
                 <a href="#" class="text-decoration-none fs-4 pt-3 ps-5" style="color:rgb(13,67,94);">More</a>
             </div>
